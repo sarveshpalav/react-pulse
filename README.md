@@ -1,5 +1,5 @@
-# ReactSphere
-ReactSphere is a showcase project built to demonstrate the entire React ecosystem. Each section focuses on specific concepts, with clear examples and explanations.
+# ReactPulse
+React Pulse is a interactive guide to how React renders, updates, and thinks.
 
 
 ### 🚀 Getting Started
