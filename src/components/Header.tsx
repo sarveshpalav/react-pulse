@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
 const Header = () => {
   return (
@@ -8,23 +8,14 @@ const Header = () => {
           It removes the fixed-width breakpoints and makes it 100% wide. 
       */}
       <Container fluid>
-        <Navbar.Brand href="#home">React Sphere</Navbar.Brand>
+        <Navbar.Brand href="#home">React Pulse</Navbar.Brand>
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          
-          <Nav>
-            <Nav.Link href="#login">Login</Nav.Link>
+            <Nav.Link href="#link">About</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
