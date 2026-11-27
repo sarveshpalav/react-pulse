@@ -49,7 +49,7 @@ interface ComponentsProps {
 
 const Components = ({ onBack }: ComponentsProps) => {
 	return (
-		<main className="py-5">
+		<main className="components-page py-5">
 			<Container>
 				<Button variant="outline-secondary" className="mb-4" onClick={onBack}>
 					← Back
