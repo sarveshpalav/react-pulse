@@ -78,7 +78,7 @@ const Components = ({ onBack }: ComponentsProps) => {
 
 				<div className="card bg-dark border-0 shadow-sm">
 					<div className="card-header text-light fw-semibold">Example</div>
-					<pre className="mb-0 p-3 text-light overflow-auto">
+					<pre className="code-sample mb-0 p-3 text-light overflow-auto">
 						<code>{exampleCode}</code>
 					</pre>
 				</div>
@@ -130,14 +130,14 @@ const Components = ({ onBack }: ComponentsProps) => {
 				</div>
 				<div className="card bg-dark border-0 shadow-sm">
 					<div className="card-header text-light fw-semibold">Function Component Example</div>
-					<pre className="mb-0 p-3 text-light overflow-auto">
+					<pre className="code-sample mb-0 p-3 text-light overflow-auto">
 						<code>{functionComponentExample}</code>
 					</pre>
 				</div>
 			
 				<div className="card bg-dark border-0 shadow-sm mt-3">
 					<div className="card-header text-light fw-semibold">Class Component Example</div>
-					<pre className="mb-0 p-3 text-light overflow-auto">
+					<pre className="code-sample mb-0 p-3 text-light overflow-auto">
 						<code>{classComponentExample}</code>
 					</pre>
 				</div>
