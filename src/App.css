@@ -242,6 +242,13 @@
   --bs-btn-hover-color: #fff;
 }
 
+.code-sample {
+  overflow-x: auto;
+  text-align: left;
+  white-space: pre;
+  tab-size: 2;
+}
+
 .about-intro {
   max-width: 740px;
   padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
