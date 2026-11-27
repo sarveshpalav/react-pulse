@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
-import Components from './concepts/components';
+import Components from './concepts/Components';
 
 const App = () => {
   const [activePage, setActivePage] = useState<'main' | 'components'>('main');

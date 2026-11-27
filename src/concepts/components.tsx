@@ -14,6 +14,35 @@ const exampleCode = `function Welcome({ name }) {
   return <h1>Hello, {name}!</h1>;
 }`;
 
+const functionComponentExample = `import { useState } from "react";
+
+function Counter({ initialCount = 0 }) {
+  const [count, setCount] = useState(initialCount);
+
+  return (
+    <button onClick={() => setCount((prev) => prev + 1)}>
+      Count: {count}
+    </button>
+  );
+}`;
+
+const classComponentExample = `import { Component } from "react";
+
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: props.initialCount ?? 0 };
+  }
+
+  render() {
+    return (
+      <button onClick={() => this.setState((prev) => ({ count: prev.count + 1 }))}>
+        Count: {this.state.count}
+      </button>
+    );
+  }
+}`;
+
 interface ComponentsProps {
   onBack: () => void;
 }
@@ -51,6 +80,65 @@ const Components = ({ onBack }: ComponentsProps) => {
 					<div className="card-header text-light fw-semibold">Example</div>
 					<pre className="mb-0 p-3 text-light overflow-auto">
 						<code>{exampleCode}</code>
+					</pre>
+				</div>
+				<div className="mb-4 mt-4">
+					<h2 className="fw-bold mb-3">Function vs. Class Components</h2>
+					<div className="table-responsive">
+						<table className="table table-bordered align-middle mb-0">
+							<thead className="table-dark">
+								<tr>
+									<th scope="col">Feature</th>
+									<th scope="col">Function Components</th>
+									<th scope="col">Class Components</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Syntax</td>
+									<td>Plain JavaScript function returning JSX</td>
+									<td>ES6 classes that extend <code>React.Component</code>with a <code>render()</code> method</td>
+								</tr>
+								<tr>
+									<td>State</td>
+									<td>Managed with Hooks such as <code>useState</code> and <code>useReducer</code></td>
+									<td>Managed with <code>this.state</code> and <code>this.setState</code></td>
+								</tr>
+								<tr>
+									<td>Side Effects and Lifecycle</td>
+									<td>Handled with Hooks such as <code>useEffect</code> and <code>useLayoutEffect</code></td>
+									<td>Uses lifecycle methods such as <code>componentDidMount</code>, <code>componentDidUpdate</code>, and <code>componentWillUnmount</code></td>
+								</tr>
+								<tr>
+									<td>Error Boundaries</td>
+									<td>Not supported; use class components for error boundaries</td>
+									<td>Supported; implement <code>componentDidCatch</code> and <code>getDerivedStateFromError</code></td>
+								</tr>
+								<tr>
+									<td>Performance</td>
+									<td>Generally better performance with memoization and hooks</td>
+									<td>Can be less performant without proper optimization</td>
+								</tr>
+								<tr>
+									<td>Current Standard</td>
+									<td>Recommended default for new components</td>
+									<td>Mostly legacy; still used for error boundaries</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div className="card bg-dark border-0 shadow-sm">
+					<div className="card-header text-light fw-semibold">Function Component Example</div>
+					<pre className="mb-0 p-3 text-light overflow-auto">
+						<code>{functionComponentExample}</code>
+					</pre>
+				</div>
+			
+				<div className="card bg-dark border-0 shadow-sm mt-3">
+					<div className="card-header text-light fw-semibold">Class Component Example</div>
+					<pre className="mb-0 p-3 text-light overflow-auto">
+						<code>{classComponentExample}</code>
 					</pre>
 				</div>
 			</Container>
